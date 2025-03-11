@@ -10,6 +10,7 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
+<<<<<<< HEAD
     return {
         id,
         name,
@@ -20,6 +21,9 @@ export function makeBlankQuestion(
         points: 1,
         published: false
     };
+=======
+    return {};
+>>>>>>> origin/task-components
 }
 
 /**
@@ -30,9 +34,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+<<<<<<< HEAD
     let finalAnswer =
         answer.trim().toLowerCase() === question.expected.trim().toLowerCase();
     return finalAnswer;
+=======
+    return false;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -42,10 +50,14 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+<<<<<<< HEAD
     if (question.type === "short_answer_question") {
         return true;
     }
     return question.options.includes(answer);
+=======
+    return false;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -55,8 +67,12 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
+<<<<<<< HEAD
     let newQuestion = question;
     return newQuestion.id + ": " + newQuestion.name.substring(0, 10);
+=======
+    return "";
+>>>>>>> origin/task-components
 }
 
 /**
@@ -77,6 +93,7 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
+<<<<<<< HEAD
     let result = "# " + question.name + "\n" + question.body;
     if (question.type === "multiple_choice_question") {
         for (const option of question.options) {
@@ -85,6 +102,9 @@ export function toMarkdown(question: Question): string {
     }
 
     return result;
+=======
+    return "";
+>>>>>>> origin/task-components
 }
 
 /**
@@ -92,10 +112,14 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
+<<<<<<< HEAD
     return {
         ...question,
         name: newName
     };
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -104,10 +128,14 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
+<<<<<<< HEAD
     return {
         ...question,
         published: !question.published
     };
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -117,6 +145,7 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
+<<<<<<< HEAD
     return {
         id,
         name: "Copy of " + oldQuestion.name,
@@ -127,6 +156,9 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         points: oldQuestion.points,
         published: false
     };
+=======
+    return oldQuestion;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -137,10 +169,14 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
+<<<<<<< HEAD
     return {
         ...question,
         options: [...question.options, newOption]
     };
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -157,6 +193,7 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
+<<<<<<< HEAD
     return {
         id: id,
         name: name,
@@ -167,4 +204,7 @@ export function mergeQuestion(
         points: points,
         published: false
     };
+=======
+    return contentQuestion;
+>>>>>>> origin/task-components
 }
