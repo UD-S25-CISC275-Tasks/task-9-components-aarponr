@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-<<<<<<< HEAD
 // Define Holiday type
 type Holiday =
     | "Christmas"
@@ -17,7 +16,7 @@ export function CycleHoliday(): React.JSX.Element {
         Halloween: { emoji: "🎃", month: 10 },
         "New Years": { emoji: "🎆", month: 1 },
         Thanksgiving: { emoji: "🦃", month: 11 },
-        "Fourth of July": { emoji: "🎇", month: 7 }
+        "Fourth of July": { emoji: "🎇", month: 7 },
     };
 
     // Alphabetical order function
@@ -27,7 +26,7 @@ export function CycleHoliday(): React.JSX.Element {
             "Fourth of July",
             "Halloween",
             "New Years",
-            "Thanksgiving"
+            "Thanksgiving",
         ];
         const currentIndex = holidays.indexOf(current);
         return holidays[(currentIndex + 1) % holidays.length];
@@ -40,7 +39,7 @@ export function CycleHoliday(): React.JSX.Element {
             "Fourth of July",
             "Halloween",
             "Thanksgiving",
-            "Christmas"
+            "Christmas",
         ];
         const currentIndex = holidays.indexOf(current);
         return holidays[(currentIndex + 1) % holidays.length];
@@ -67,8 +66,4 @@ export function CycleHoliday(): React.JSX.Element {
             </div>
         </div>
     );
-=======
-export function CycleHoliday(): React.JSX.Element {
-    return <div>Cycle Holiday</div>;
->>>>>>> origin/task-components
 }
